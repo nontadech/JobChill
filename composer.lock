@@ -1,0 +1,157 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "0a592bb16c12171df9cad3cc3c146eec",
+    "content-hash": "03fc02d6fd5491c98cb9fb132541d19c",
+    "packages": [
+        {
+            "name": "kenjis/codeigniter-ss-twig",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kenjis/codeigniter-ss-twig.git",
+                "reference": "35fe487d452c8887d7150c6a8f61e7877136dd6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kenjis/codeigniter-ss-twig/zipball/35fe487d452c8887d7150c6a8f61e7877136dd6d",
+                "reference": "35fe487d452c8887d7150c6a8f61e7877136dd6d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "twig/twig": "~1.20"
+            },
+            "require-dev": {
+                "codeigniter/framework": "3.0.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kenji Suzuki",
+                    "homepage": "https://github.com/kenjis/codeigniter-ss-twig"
+                }
+            ],
+            "description": "A Simple and Secure Twig integration for CodeIgniter 3.0",
+            "keywords": [
+                "codeigniter",
+                "twig"
+            ],
+            "time": "2016-03-08 11:43:15"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.24.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "3566d311a92aae4deec6e48682dc5a4528c4a512"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3566d311a92aae4deec6e48682dc5a4528c4a512",
+                "reference": "3566d311a92aae4deec6e48682dc5a4528c4a512",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.7"
+            },
+            "require-dev": {
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.24-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2016-05-30 09:11:59"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "mikey179/vfsStream",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mikey179/vfsStream.git",
+                "reference": "fc0fe8f4d0b527254a2dc45f0c265567c881d07e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/fc0fe8f4d0b527254a2dc45f0c265567c881d07e",
+                "reference": "fc0fe8f4d0b527254a2dc45f0c265567c881d07e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "org\\bovigo\\vfs": "src/main/php"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "homepage": "http://vfs.bovigo.org/",
+            "time": "2012-08-25 12:49:29"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.2.4"
+    },
+    "platform-dev": []
+}
