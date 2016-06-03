@@ -112,6 +112,8 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 	 */
 	public function open($save_path, $name)
 	{
+	  echo $save_path;
+	  exit;
 		if ( ! is_dir($save_path))
 		{
 			if ( ! mkdir($save_path, 0700, TRUE))
