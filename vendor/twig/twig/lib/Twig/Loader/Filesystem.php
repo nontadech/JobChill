@@ -30,6 +30,7 @@ class Twig_Loader_Filesystem implements Twig_LoaderInterface, Twig_ExistsLoaderI
      */
     public function __construct($paths = array())
     {
+
         if ($paths) {
             $this->setPaths($paths);
         }
@@ -205,7 +206,6 @@ class Twig_Loader_Filesystem implements Twig_LoaderInterface, Twig_ExistsLoaderI
                 return $this->cache[$name] = $path.'/'.$shortname;
             }
         }
-
         $this->errorCache[$name] = sprintf('Unable to find template "%s" (looked into: %s).', $name, implode(', ', $this->paths[$namespace]));
 
         if (!$throw) {

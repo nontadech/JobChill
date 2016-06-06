@@ -42,9 +42,8 @@ class Twig
 
 	public function __construct($params = [])
 	{
-		// default config
 		$this->config = [
-			'paths' => [VIEWPATH],
+			'paths' => [APPPATH . '/modules'],
 			'cache' => APPPATH . '/cache/twig',
 		];
 

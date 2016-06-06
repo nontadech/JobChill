@@ -25,7 +25,7 @@ $system_path = rtrim($system_path, '/') . '/';
 define('BASEPATH', str_replace("\\", "/", $system_path));
 define('FCPATH',   $doc_root . '/');
 define('APPPATH',  $application_folder . '/');
-define('VIEWPATH', $application_folder . '/views/');
+define('VIEWPATH', $application_folder . '/views//');
 
 require(BASEPATH . 'core/Common.php');
 

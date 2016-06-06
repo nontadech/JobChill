@@ -58,8 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array();
-
+$autoload['libraries'] = array('session','twig','employee','company');
 /*
 | -------------------------------------------------------------------
 |  Auto-load Drivers
@@ -83,7 +82,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('asset');
+$autoload['helper'] = array('asset','url');
 
 /*
 | -------------------------------------------------------------------
