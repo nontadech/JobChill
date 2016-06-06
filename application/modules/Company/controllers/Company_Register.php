@@ -17,19 +17,7 @@ class Company_Register extends CI_Controller
     $this->session->set_userdata($datasession);
     $this->twig->addGlobal('session', $this->session);
 
-    $this->twig->display('Company/views/register', []);
-  }
-
-  public function flash()
-  {
-    $this->session->set_flashdata('test_sess', 'Hello Session');
-    redirect('session_sample/flash_test');
-  }
-
-  public function flash_test()
-  {
-    $this->twig->addGlobal('session', $this->session);
-    $this->twig->display('session_sample/flash');
+    $this->twig->display('/modules/Company/views/register', []);
   }
 
 }

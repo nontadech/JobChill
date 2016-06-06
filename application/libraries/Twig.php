@@ -43,7 +43,7 @@ class Twig
 	public function __construct($params = [])
 	{
 		$this->config = [
-			'paths' => [APPPATH . '/modules'],
+			'paths' => [APPPATH],
 			'cache' => APPPATH . '/cache/twig',
 		];
 
@@ -136,7 +136,8 @@ class Twig
 		$this->addCIFunctions();
 
 		$view = $view . '.twig';
-		return $this->twig->render($view, $params);
+	  	$params['_view'] = $view;
+		return $this->twig->render('/views/page.twig', $params);
 	}
 
 	protected function addCIFunctions()

@@ -1,5 +1,93 @@
-<p>Nick: {{ session.userdata.nick }}</p>
+{% include '/views/header.twig' %}
 
-<p>Flashdata: {{ session.flashdata.test_sess }}</p>
+<div class="wrapper">
+  <div class="registerFormContent">
+    <div class="container">
+      <div class="headerTheme text-center">
+        <h1 class="h1"><span>REGISTER</span></h1>
+        <h2 class="h2"><span class="textColorHighlight">PLEASE FILL DETAILS AS FOLLOW</span></h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-offset-3 col-lg-7 col-md-offset-1 col-md-10">
+          <div class="formTheme">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>Email <b class="requireInput">*</b></span></label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>Name</span></label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group has-error">
+                <label class="col-md-4 control-label"><span>Surname</span></label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control">
+                  <label class="control-label">Input with error</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>Password</span></label>
+                <div class="col-md-8">
+                  <input type="password" class="form-control">
+                  <div id="passwordProgressCollapse" class="passwordProgressWrap collapse" aria-expanded="false">
+                    <div class="passwordProgress">
+                      <div class="passwordProgressBar" style="width: 0px;"><div class="passwordProgressText"></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>Comfirm Password</span></label>
+                <div class="col-md-8">
+                  <input type="password" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>Tel.</span></label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>Address</span></label>
+                <div class="col-md-8">
+                  <textarea class="form-control" rows="6"></textarea>
+                </div>
+              </div>
+              <div class="form-group hasCollapse">
+                <div class="col-md-offset-4 col-md-8">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" checked="">
+                    </label>
+                      <span>
+                        <a aria-controls="collapseTermsConditions" aria-expanded="false" href="#collapseTermsConditions" data-toggle="collapse" role="button">Terms and Conditions</a>
+                      </span>
+                  </div>
+                  <div id="collapseTermsConditions" class="collapse">
+                    <div class="well">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id repellat, odio nisi, voluptates voluptatem deleniti iusto est molestiae reprehenderit, odit eos. Ad explicabo, quisquam nam doloribus adipisci ratione magni. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus repellendus quae cupiditate, doloribus voluptate quam architecto autem. Eaque cumque iusto dignissimos facilis dolor in optio repellendus aspernatur! Consectetur, similique, ab.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo officiis, cupiditate, quasi cum ipsa tempora, dolore maxime laudantium veniam repudiandae dolores quisquam aspernatur harum et corporis? Asperiores ducimus id explicabo! Officia deserunt, atque eligendi incidunt magnam consequuntur, ipsum sint doloremque accusamus dolor fuga illo eum quo hic suscipit laudantium? Unde autem facilis quis possimus, earum perferendis, natus voluptas, nemo ipsa a cum voluptates ea odio excepturi sint porro necessitatibus deleniti velit perspiciatis fugiat voluptatem iure modi sequi molestiae accusamus. Temporibus obcaecati nam, alias aut assumenda iusto molestiae, illum repellendus asperiores perferendis dignissimos molestias modi ipsam suscipit cum, velit explicabo incidunt id expedita, autem harum earum mollitia. Doloribus, aliquid accusamus ad nesciunt, ea repudiandae facere ipsum asperiores corporis eius eaque ratione aspernatur reiciendis odio iure nisi voluptate. Soluta enim sed amet odio dolorem, asperiores optio doloribus sint quibusdam nihil laboriosam, id inventore alias modi, libero nesciunt qui, reiciendis non necessitatibus odit atque ut adipisci! Obcaecati nisi, laboriosam dolore repellendus, neque nostrum blanditiis numquam veniam magnam debitis dolorum deleniti, nulla voluptatem suscipit libero nesciunt commodi consectetur id alias esse. Tenetur esse soluta dolor labore cum, a sapiente sit aspernatur! Cumque fuga quos laudantium, quaerat error dolorum aliquam facere, dolores laboriosam atque doloribus.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-offset-4 col-md-8">
+                  <button class="btn btnSmTheme" type="submit">SUBMIT</button>
+                </div>
+              </div>
+            </form>
+          </div>
 
-<a href="{{ site_url('/session_sample/flash') }}">Go to "/session_sample/flash"</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include '/views/footer.twig' %}
