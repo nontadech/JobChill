@@ -1,39 +1,24 @@
 {% include '/views/header.twig' %}
-
 <div class="wrapper">
   <div class="registerFormContent">
     <div class="container">
       <div class="headerTheme text-center">
         <h1 class="h1"><span>REGISTER</span></h1>
-        <h2 class="h2"><span class="textColorHighlight">PLEASE FILL DETAILS AS FOLLOW</span></h2>
       </div>
       <div class="row">
         <div class="col-lg-offset-3 col-lg-7 col-md-offset-1 col-md-10">
           <div class="formTheme">
-            <form class="form-horizontal">
+            <form id="registerCompany" class="form-horizontal" data-toggle="validator" role="form">
               <div class="form-group">
-                <label class="col-md-4 control-label"><span>Email <b class="requireInput">*</b></span></label>
+                <label class="col-md-4 control-label"><span>Username <b class="requireInput">*</b></span></label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-4 control-label"><span>Name</span></label>
-                <div class="col-md-8">
-                  <input type="text" class="form-control">
-                </div>
-              </div>
-              <div class="form-group has-error">
-                <label class="col-md-4 control-label"><span>Surname</span></label>
-                <div class="col-md-8">
-                  <input type="text" class="form-control">
-                  <label class="control-label">Input with error</label>
+                  <input type="text" class="form-control" required>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>Password</span></label>
                 <div class="col-md-8">
-                  <input type="password" class="form-control">
+                  <input type="password" class="form-control" required>
                   <div id="passwordProgressCollapse" class="passwordProgressWrap collapse" aria-expanded="false">
                     <div class="passwordProgress">
                       <div class="passwordProgressBar" style="width: 0px;"><div class="passwordProgressText"></div></div>
@@ -44,37 +29,161 @@
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>Comfirm Password</span></label>
                 <div class="col-md-8">
-                  <input type="password" class="form-control">
+                  <input type="password" class="form-control" required>
+                </div>
+              </div>
+              <hr/>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>เลือก Package</span></label>
+                <div class="col-md-8">
+                  <select class="form-control">
+                    <option> -- โปรดระบุ -- </option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-md-4 control-label"><span>Tel.</span></label>
+                <label class="col-md-4 control-label"><span>ระยะเวลา</span></label>
+                <div class="col-md-8">
+                  <select class="form-control">
+                    <option> -- โปรดระบุ -- </option>
+                  </select>
+                </div>
+              </div>
+              <hr/>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>ชื่อผู้ติดต่อ</span></label>
                 <div class="col-md-8">
                   <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-md-4 control-label"><span>Address</span></label>
+                <label class="col-md-4 control-label"><span>ชื่อบริษัท</span></label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>ลักษณะธุรกิจ</span></label>
+                <div class="col-md-8">
+                  <select class="form-control">
+                    <option> -- โปรดระบุ -- </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>รายละเอียดของบริษัท</span></label>
                 <div class="col-md-8">
                   <textarea class="form-control" rows="6"></textarea>
                 </div>
               </div>
-              <div class="form-group hasCollapse">
-                <div class="col-md-offset-4 col-md-8">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" checked="">
-                    </label>
-                      <span>
-                        <a aria-controls="collapseTermsConditions" aria-expanded="false" href="#collapseTermsConditions" data-toggle="collapse" role="button">Terms and Conditions</a>
-                      </span>
-                  </div>
-                  <div id="collapseTermsConditions" class="collapse">
-                    <div class="well">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id repellat, odio nisi, voluptates voluptatem deleniti iusto est molestiae reprehenderit, odit eos. Ad explicabo, quisquam nam doloribus adipisci ratione magni. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus repellendus quae cupiditate, doloribus voluptate quam architecto autem. Eaque cumque iusto dignissimos facilis dolor in optio repellendus aspernatur! Consectetur, similique, ab.
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo officiis, cupiditate, quasi cum ipsa tempora, dolore maxime laudantium veniam repudiandae dolores quisquam aspernatur harum et corporis? Asperiores ducimus id explicabo! Officia deserunt, atque eligendi incidunt magnam consequuntur, ipsum sint doloremque accusamus dolor fuga illo eum quo hic suscipit laudantium? Unde autem facilis quis possimus, earum perferendis, natus voluptas, nemo ipsa a cum voluptates ea odio excepturi sint porro necessitatibus deleniti velit perspiciatis fugiat voluptatem iure modi sequi molestiae accusamus. Temporibus obcaecati nam, alias aut assumenda iusto molestiae, illum repellendus asperiores perferendis dignissimos molestias modi ipsam suscipit cum, velit explicabo incidunt id expedita, autem harum earum mollitia. Doloribus, aliquid accusamus ad nesciunt, ea repudiandae facere ipsum asperiores corporis eius eaque ratione aspernatur reiciendis odio iure nisi voluptate. Soluta enim sed amet odio dolorem, asperiores optio doloribus sint quibusdam nihil laboriosam, id inventore alias modi, libero nesciunt qui, reiciendis non necessitatibus odit atque ut adipisci! Obcaecati nisi, laboriosam dolore repellendus, neque nostrum blanditiis numquam veniam magnam debitis dolorum deleniti, nulla voluptatem suscipit libero nesciunt commodi consectetur id alias esse. Tenetur esse soluta dolor labore cum, a sapiente sit aspernatur! Cumque fuga quos laudantium, quaerat error dolorum aliquam facere, dolores laboriosam atque doloribus.
-                    </div>
-                  </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>สวัสดิการ</span></label>
+                <div class="col-md-8">
+                  <textarea class="form-control" rows="6"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>วิธีการสมัคร</span></label>
+                <div class="col-md-8">
+                  <textarea class="form-control" rows="6"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>ที่อยู่</span></label>
+                <div class="col-md-8">
+                  <textarea class="form-control" rows="6"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>จังหวัด</span></label>
+                <div class="col-md-8">
+                  <select class="form-control">
+                    <option> -- โปรดระบุ -- </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>เขต/อำเภอ</span></label>
+                <div class="col-md-8">
+                  <select class="form-control">
+                    <option> -- โปรดระบุ -- </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>แขวง/ตำบล</span></label>
+                <div class="col-md-8">
+                  <select class="form-control">
+                    <option> -- โปรดระบุ -- </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>รหัสไปรษณีย์</span></label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>โทรศัพท์</span></label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>แฟกซ์</span></label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>Email</span></label>
+                <div class="col-md-8">
+                  <input type="email" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>ยืนยัน Email</span></label>
+                <div class="col-md-8">
+                  <input type="email" class="form-control" data-error="Bruh, that email address is invalid" required>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span> Website </span></label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>การเดินทาง</span></label>
+                <div class="col-md-8">
+                  <textarea class="form-control" rows="6"></textarea>
+                </div>
+              </div>
+              <hr/>
+              <div class="form-group">
+                <div class="checkbox col-md-offset-4 col-md-8">
+                  <label>
+                    <input type="checkbox" value="">
+                    เพื่อใช้บริการเก็บใบสมัครไว้ที่ Jobchill.com
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="checkbox col-md-offset-4 col-md-8">
+                  <label>
+                    <input type="checkbox" value="">
+                    ต้องการรับใบสมัครเป็นภาษาอังกฤษเท่านั้น
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="checkbox col-md-offset-4 col-md-8">
+                  <label>
+                    <input type="checkbox" value="">
+                    ต้องการรับใบสมัครทาง Email ในรูปแบบ HTML
+                  </label>
                 </div>
               </div>
               <div class="form-group">
@@ -84,10 +193,14 @@
               </div>
             </form>
           </div>
-
         </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+  $(function(){
+    $('#registerCompany').validator()
+  });
+</script>
 {% include '/views/footer.twig' %}

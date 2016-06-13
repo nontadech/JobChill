@@ -10,6 +10,7 @@ class Company_Register extends CI_Controller
 
   public function index()
   {
+
     $datasession = array(
       'nick' => 'Mike',
       'login_ok' => true
@@ -18,6 +19,7 @@ class Company_Register extends CI_Controller
     $this->twig->addGlobal('session', $this->session);
 
     $this->twig->display('/modules/Company/views/register', []);
+
   }
 
 }
