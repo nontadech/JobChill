@@ -61,7 +61,7 @@ class Company_Login extends CI_Controller
     if($this->input->post('token') === $this->session->userdata('token')){
       $dataLogin = __ValueToDatabase($this->input->post(NULL, FALSE), 'val_');
       if($this->company->login($dataLogin)){
-
+        redirect(base_url("company/member"));
       }else{
         $this->buildForm();
       }

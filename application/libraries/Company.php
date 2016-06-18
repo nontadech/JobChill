@@ -58,6 +58,6 @@ class Company {
     else return FALSE;
   }
   public function logout(){
-    $this->session->unset_userdata('member');
+    $this->CI->session->unset_userdata('member');
   }
 }

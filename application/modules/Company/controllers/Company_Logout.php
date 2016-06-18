@@ -10,6 +10,7 @@ class Company_Logout extends CI_Controller
 
   public function index()
   {
-    echo 1;
+    $this->company->logout();
+    redirect(base_url("company/login"));
   }
 }

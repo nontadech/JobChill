@@ -10,6 +10,7 @@ class Company_Member extends CI_Controller
 
   public function index()
   {
-    echo 1;
+    $data = [];
+    $this->twig->display('/modules/Company/views/member', $data);
   }
 }

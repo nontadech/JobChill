@@ -1,1 +1,17 @@
-<header></header>
+<div class="tat_header">
+  <div class="container">
+    <div class="tat_headerInner">
+      <div class="tat_headerBarSM">
+        <ul class="list-inline">
+          {% if(session.userdata.member) is empty %}
+          <li><a href="{{ base_url }}login"><span><i class="sprite sprite-headerIconLogin"></i> Login</span></a></li>
+          <li><a href="{{ base_url }}register"><span><i class="sprite sprite-headerIconRegister"></i> Register</span></a></li>
+          {% else %}
+          <li><a href="{{ base_url }}member"><span><i class="sprite sprite-headerIconLogin"></i> Member</span></a></li>
+          <li><a href="{{ base_url }}logout"><span><i class="sprite sprite-headerIconLogin"></i> Logout</span></a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
