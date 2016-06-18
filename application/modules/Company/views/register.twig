@@ -1,51 +1,51 @@
 {% include '/views/header.twig' %}
+
 <div class="wrapper">
   <div class="registerFormContent">
     <div class="container">
       <div class="headerTheme text-center">
         <h1 class="h1"><span>REGISTER</span></h1>
       </div>
+      {{ status_message|raw }}
       <div class="row">
         <div class="col-lg-offset-3 col-lg-7 col-md-offset-1 col-md-10">
           <div class="formTheme">
-            <form id="registerCompany" class="form-horizontal" data-toggle="validator" role="form">
+            <form id="registerCompany" class="form-horizontal" data-toggle="validator" role="form" method="post">
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>Username <b class="requireInput">*</b></span></label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" required>
+                  <input type="text" name="val_username" class="form-control" value="{{ val_username }}" data-error="Username is invalid" required>
+                  <label class="help-block with-errors">{{ error_username }}</label>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>Password</span></label>
                 <div class="col-md-8">
-                  <input type="password" class="form-control" required>
-                  <div id="passwordProgressCollapse" class="passwordProgressWrap collapse" aria-expanded="false">
-                    <div class="passwordProgress">
-                      <div class="passwordProgressBar" style="width: 0px;"><div class="passwordProgressText"></div></div>
-                    </div>
-                  </div>
+                  <input type="password" name="val_password" class="form-control"  data-error="Password is invalid" required>
+                  <label class="help-block with-errors">{{ error_password }}</label>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-md-4 control-label"><span>Comfirm Password</span></label>
+                <label class="col-md-4 control-label"><span>Confirm Password</span></label>
                 <div class="col-md-8">
-                  <input type="password" class="form-control" required>
+                  <input type="password" name="val_confirm_password" class="form-control"  data-error="Password is invalid" required>
+                  <label class="help-block with-errors">{{ error_confirm_password }}</label>
                 </div>
               </div>
               <hr/>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>เลือก Package</span></label>
                 <div class="col-md-8">
-                  <select class="form-control">
-                    <option> -- โปรดระบุ -- </option>
+                  <select class="form-control" name="val_package_name">
+                    <option value=""> -- โปรดระบุ -- </option>
                   </select>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>ระยะเวลา</span></label>
                 <div class="col-md-8">
-                  <select class="form-control">
-                    <option> -- โปรดระบุ -- </option>
+                  <select class="form-control" name="val_package_time">
+                    <option value=""> -- โปรดระบุ -- </option>
                   </select>
                 </div>
               </div>
@@ -53,142 +53,128 @@
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>ชื่อผู้ติดต่อ</span></label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" name="val_contact_name">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>ชื่อบริษัท</span></label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" name="val_name">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>ลักษณะธุรกิจ</span></label>
                 <div class="col-md-8">
-                  <select class="form-control">
-                    <option> -- โปรดระบุ -- </option>
+                  <select class="form-control" name="val_type">
+                    <option value=""> -- โปรดระบุ -- </option>
                   </select>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>รายละเอียดของบริษัท</span></label>
                 <div class="col-md-8">
-                  <textarea class="form-control" rows="6"></textarea>
+                  <textarea class="form-control" rows="6" name="val_detail"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>สวัสดิการ</span></label>
                 <div class="col-md-8">
-                  <textarea class="form-control" rows="6"></textarea>
+                  <textarea class="form-control" rows="6" name="val_benefits"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>วิธีการสมัคร</span></label>
                 <div class="col-md-8">
-                  <textarea class="form-control" rows="6"></textarea>
+                  <textarea class="form-control" rows="6" name="val_how_to"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>ที่อยู่</span></label>
                 <div class="col-md-8">
-                  <textarea class="form-control" rows="6"></textarea>
+                  <textarea class="form-control" rows="6" name="val_address"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>จังหวัด</span></label>
                 <div class="col-md-8">
-                  <select class="form-control">
-                    <option> -- โปรดระบุ -- </option>
+                  <select class="form-control" name="val_province">
+                    <option value=""> -- โปรดระบุ -- </option>
                   </select>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>เขต/อำเภอ</span></label>
                 <div class="col-md-8">
-                  <select class="form-control">
-                    <option> -- โปรดระบุ -- </option>
+                  <select class="form-control" name="val_area">
+                    <option value=""> -- โปรดระบุ -- </option>
                   </select>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>แขวง/ตำบล</span></label>
                 <div class="col-md-8">
-                  <select class="form-control">
-                    <option> -- โปรดระบุ -- </option>
+                  <select class="form-control" name="val_district">
+                    <option value=""> -- โปรดระบุ -- </option>
                   </select>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>รหัสไปรษณีย์</span></label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" name="val_zip_code">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>โทรศัพท์</span></label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control">
+                  <input type="tel" class="form-control" name="val_zip_code">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>แฟกซ์</span></label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" name="val_fax">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>Email</span></label>
                 <div class="col-md-8">
-                  <input type="email" class="form-control">
+                  <input type="email" class="form-control" name="val_email" value="{{ val_email }}" data-error="Bruh, that email address is invalid" required>
+                  <label class="help-block with-errors">{{ error_email }}</label>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>ยืนยัน Email</span></label>
                 <div class="col-md-8">
-                  <input type="email" class="form-control" data-error="Bruh, that email address is invalid" required>
-                  <div class="help-block with-errors"></div>
+                  <input type="email" class="form-control" name="val_confirm_email" value="{{ val_confirm_email }}" data-error="Bruh, that email address is invalid" required>
+                  <label class="help-block with-errors">{{ error_confirm_email }}</label>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span> Website </span></label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" name="val_website">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-4 control-label"><span>การเดินทาง</span></label>
                 <div class="col-md-8">
-                  <textarea class="form-control" rows="6"></textarea>
+                  <textarea class="form-control" rows="6" name="val_path"></textarea>
                 </div>
               </div>
               <hr/>
               <div class="form-group">
                 <div class="checkbox col-md-offset-4 col-md-8">
                   <label>
-                    <input type="checkbox" value="">
+                    <input type="checkbox" name="val_use_job">
                     เพื่อใช้บริการเก็บใบสมัครไว้ที่ Jobchill.com
                   </label>
                 </div>
               </div>
               <div class="form-group">
-                <div class="checkbox col-md-offset-4 col-md-8">
-                  <label>
-                    <input type="checkbox" value="">
-                    ต้องการรับใบสมัครเป็นภาษาอังกฤษเท่านั้น
-                  </label>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="checkbox col-md-offset-4 col-md-8">
-                  <label>
-                    <input type="checkbox" value="">
-                    ต้องการรับใบสมัครทาง Email ในรูปแบบ HTML
-                  </label>
-                </div>
-              </div>
-              <div class="form-group">
                 <div class="col-md-offset-4 col-md-8">
-                  <button class="btn btnSmTheme" type="submit">SUBMIT</button>
+                  <input type="hidden" name="token" value="{{ token }}" />
+                  <input type="submit" class="btn btnSmTheme" value="SUBMIT" />
                 </div>
               </div>
             </form>

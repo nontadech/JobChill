@@ -52,3 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Company/Company_Register';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['company/register'] = 'Company/Company_Register';
+
