@@ -10,3 +10,13 @@ function generateToken() {
   return $token;
 
 }
+function __ValueToDatabase($data, $prefix) {
+  $arrayDara = [];
+  foreach($data as $key => $val){
+    if(strpos($key, $prefix) !== false) {
+      $arrayDara[str_replace($prefix, '', $key)] = empty($val)?'NULL':$val;
+    }
+
+  }
+  return $arrayDara;
+}

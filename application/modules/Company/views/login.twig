@@ -1,0 +1,46 @@
+{% include '/views/header.twig' %}
+<div class="wrapper">
+  <div class="registerFormContent">
+    <div class="container">
+      <div class="headerTheme text-center">
+        <h1 class="h1"><span>LOGIN</span></h1>
+      </div>
+      {{ status_message|raw }}
+      <div class="row">
+        <div class="col-lg-offset-3 col-lg-7 col-md-offset-1 col-md-10">
+          <div class="formTheme">
+            <form id="loginCompany" class="form-horizontal" data-toggle="validator" role="form" method="post" >
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>Username <b class="requireInput">*</b></span></label>
+                <div class="col-md-8">
+                  <input type="text" name="val_username" class="form-control" value="{{ val_username }}" data-error="Username is invalid" required>
+                  <label class="help-block with-errors">{{ error_username|raw }}</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label"><span>Password <b class="requireInput">*</b></span></label>
+                <div class="col-md-8">
+                  <input type="password" name="val_password" class="form-control"  data-error="Password is invalid" required>
+                  <label class="help-block with-errors">{{ error_password|raw }}</label>
+                </div>
+              </div>
+              <hr/>
+              <div class="form-group">
+                <div class="col-md-offset-4 col-md-8">
+                  <input type="hidden" name="token" value="{{ token }}" />
+                  <input type="submit" class="btn btnSmTheme" value="SUBMIT" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function(){
+    //$('#loginCompany').validator()
+  });
+</script>
+{% include '/views/footer.twig' %}

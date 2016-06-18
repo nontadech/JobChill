@@ -54,4 +54,6 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['company/register'] = 'Company/Company_Register';
+$route['company/login'] = 'Company/Company_Login';
+$route['company/member'] = 'Company/Company_Member';
 

@@ -451,9 +451,9 @@ $config['global_xss_filtering'] = FALSE;
 $config['csrf_protection'] = true;
 $config['csrf_token_name'] = 'csrf_name';
 $config['csrf_cookie_name'] = 'csrf_name';
-$config['csrf_expire'] = 7200;
+$config['csrf_expire'] = 0;
 $config['csrf_regenerate'] = TRUE;
-$config['csrf_exclude_uris'] = array('company/register');
+$config['csrf_exclude_uris'] = array('company/register','company/login');
 
 /*
 |--------------------------------------------------------------------------
