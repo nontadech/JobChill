@@ -4,25 +4,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Company_Register extends CI_Controller
 {
   var $formName;
-  var $formToken;
   public function __construct()
   {
     parent::__construct();
     $this->formName = 'register';
+
   }
 
   public function index(){
     $token = $this->input->post('token');
     if(!empty($token))
       $this->validateForm();
-    else
+    else{
       $this->buildForm();
+    }
+
   }
 
   public function buildForm($data = array())
   {
-    $data['token'] = $this->formToken = generateToken();
-
+    $data['token'] = $this->security->get_csrf_hash();
     $this->twig->display('/modules/Company/views/register', $data);
 
   }
@@ -46,7 +47,18 @@ class Company_Register extends CI_Controller
       $data['val_username'] = set_value('val_username');
       $data['val_email'] = set_value('val_email');
       $data['val_confirm_email'] = set_value('val_confirm_email');
-      $data['status_message'] = validation_errors();
+      $data['error_username'] = form_error('val_username','<p style="color:#a94442">','</p>');
+      $data['error_password'] = form_error('val_password','<p style="color:#a94442">','</p>');
+      $data['error_confirm_password'] = form_error('val_confirm_password','<p style="color:#a94442">','</p>');
+      $data['error_email'] = form_error('val_email','<p style="color:#a94442">','</p>');
+      $data['error_confirm_email'] = form_error('val_confirm_email','<p style="color:#a94442">','</p>');
+      logs_message(
+        'frontend/form',
+        'controllers.Company.Register',
+        '[action][data:{'.json_encode($data).'}]',
+        'register/form_validation',
+        '.validateForm',
+        'Register');
       $this->buildForm($data);
     }
     else
@@ -56,6 +68,32 @@ class Company_Register extends CI_Controller
   }
   public function submitForm()
   {
-    
+    $data['ip'] = $this->input->ip_address();
+    if ($this->input->valid_ip($data['ip']))
+    {
+      if($this->input->post('token') === $this->security->get_csrf_hash()){
+
+      }else{
+        logs_message(
+          'frontend/form',
+          'controllers.Company.Register',
+          '[action][data:{'.$this->input->post('token').'}]',
+          'register/valid_token',
+          '.submitForm',
+          'Register');
+        $data['status_message'] = 'no valid token';
+        $this->buildForm($data);
+      }
+    }else{
+      logs_message(
+        'frontend/form',
+        'controllers.Company.Register',
+        '[action][data:{'.$data['ip'].'}]',
+        'register/valid_ip',
+        '.submitForm',
+        'Register');
+      $data['status_message'] = 'no valid ip';
+      $this->buildForm($data);
+    }
   }
 }
