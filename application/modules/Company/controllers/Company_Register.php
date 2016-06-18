@@ -12,7 +12,6 @@ class Company_Register extends CI_Controller
   }
 
   public function index(){
-    echo $this->input->ip_address();
     $token = $this->input->post('token');
     if(!empty($token))
       $this->validateForm();
@@ -68,31 +67,19 @@ class Company_Register extends CI_Controller
   }
   public function submitForm()
   {
+    echo $_SERVER['SERVER_ADDR'];
     $data['ip'] = $this->input->ip_address();
-    if ($this->input->valid_ip($data['ip']))
-    {
-      if($this->input->post('token') === $this->security->get_csrf_hash()){
+    if($this->input->post('token') === $this->security->get_csrf_hash()){
 
-      }else{
-        logs_message(
-          'frontend/form',
-          'controllers.Company.Register',
-          '[action][data:{'.$this->input->post('token').'}]',
-          'register/valid_token',
-          '.submitForm',
-          'Register');
-        $data['status_message'] = 'no valid token';
-        $this->buildForm($data);
-      }
     }else{
       logs_message(
         'frontend/form',
         'controllers.Company.Register',
-        '[action][data:{'.$data['ip'].'}]',
-        'register/valid_ip',
+        '[action][data:{'.$this->input->post('token').'}]',
+        'register/valid_token',
         '.submitForm',
         'Register');
-      $data['status_message'] = 'no valid ip';
+      $data['status_message'] = 'no valid token';
       $this->buildForm($data);
     }
   }
