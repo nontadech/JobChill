@@ -12,13 +12,13 @@ class Company_Register extends CI_Controller
   }
 
   public function index(){
+    echo $this->input->ip_address();
     $token = $this->input->post('token');
     if(!empty($token))
       $this->validateForm();
     else{
       $this->buildForm();
     }
-
   }
 
   public function buildForm($data = array())
