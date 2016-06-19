@@ -14,8 +14,6 @@ class Company_Login extends CI_Controller
 
   public function index()
   {
-    //print_r($this->session->all_userdata());
-    //$this->session->sess_destroy();
     $token = $this->input->post('token');
     if(!empty($token))
       $this->validateForm();

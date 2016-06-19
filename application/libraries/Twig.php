@@ -138,7 +138,11 @@ class Twig
 
 		$view = $view . '.twig';
 	  	$params['_view'] = $view;
-		return $this->twig->render('/views/page.twig', $params);
+	  	if(isset($params['_page']) && $params['_page']){
+		  return $this->twig->render('/views/backend/page.twig', $params);
+		}else{
+		  return $this->twig->render('/views/frontend/page.twig', $params);
+		}
 	}
 
 	protected function addCIFunctions()

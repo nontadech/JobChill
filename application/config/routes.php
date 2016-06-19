@@ -58,3 +58,7 @@ $route['company/login'] = 'Company/Company_Login';
 $route['company/member'] = 'Company/Company_Member';
 $route['company/logout'] = 'Company/Company_Logout';
 
+
+
+$route['backend/dashboard'] = 'Backend/Dashboard';
+
