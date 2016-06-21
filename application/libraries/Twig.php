@@ -132,8 +132,6 @@ class Twig
 	public function render($view, $params = [])
 	{
 		$this->createTwig();
-		// We call addCIFunctions() here, because we must call addCIFunctions()
-		// after loading CodeIgniter functions in a controller.
 		$this->addCIFunctions();
 
 		$view = $view . '.twig';
