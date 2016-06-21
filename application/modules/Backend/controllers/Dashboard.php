@@ -10,6 +10,6 @@ class Dashboard extends CI_Controller
 
   public function index()
   {
-    $this->twig->display('/modules/Backend/views/Dashboard',array('_page' => 'backend'));
+    $this->twig->display('/modules/Backend/views/dashboard',array('_page' => 'backend'));
   }
 }
