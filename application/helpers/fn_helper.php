@@ -20,3 +20,14 @@ function __ValueToDatabase($data, $prefix) {
   }
   return $arrayDara;
 }
+
+function discount($quantity){
+  if($quantity > 11){
+    $number = 0.8;
+  }else if($quantity >= 6){
+    $number = 0.9;
+  }else{
+    $number = 1;
+  }
+  return $number;
+}

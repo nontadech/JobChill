@@ -88,7 +88,8 @@ switch (ENVIRONMENT)
 		echo 'The application environment is not set correctly.';
 		exit(1); // EXIT_ERROR
 }
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 /*
  *---------------------------------------------------------------
  * SYSTEM DIRECTORY NAME

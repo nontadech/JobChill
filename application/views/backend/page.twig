@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta charset="utf-8" />
   <title>{{ meta_title|e }}</title>
-  <link rel="stylesheet" href="{{ base_url('assets/css/bootstrap/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ base_url('assets/backend/css/metisMenu/metisMenu.min.css') }}">
-  <link rel="stylesheet" href="{{ base_url('assets/backend/css/timeline.css') }}">
-  <link rel="stylesheet" href="{{ base_url('assets/backend/css/sb-admin-2.css') }}">
-  <link rel="stylesheet" href="{{ base_url('assets/backend/css/morrisjs/morris.css') }}">
-  <link rel="stylesheet" href="{{ base_url('assets/backend/css/font-awesome/font-awesome.min.css') }}">
-
-  <!--
-  <script type="text/javascript" src="{{ base_url('assets/js/jquery/1.11.3/jquery.min.js') }}"></script>
-  <script type="text/javascript" src="{{ base_url('assets/js/bootstrap/bootstrap.min.js') }}"></script>
-  <script type="text/javascript" src="{{ base_url('assets/js/bootstrap/validator.js') }}"></script>
-  -->
-
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="{{ base_url('assets/backend/js/html5shiv/html5shiv.js') }}"></script>
-      <script src="{{ base_url('assets/backend/js/respond/respond.min.js') }}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <link rel="apple-touch-icon" href="pages/ico/60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+  <link href="{{ base_url('assets/backend/plugins/pace/pace-theme-flash.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ base_url('assets/backend/plugins/bootstrapv3/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ base_url('assets/backend/plugins/font-awesome/css/font-awesome.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ base_url('assets/backend/plugins/jquery-scrollbar/jquery.scrollbar.css') }}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{{ base_url('assets/backend/plugins/bootstrap-select2/select2.css') }}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{{ base_url('assets/backend/plugins/switchery/css/switchery.min.css') }}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{{ base_url('assets/backend/plugins/jquery-datatable/media/css/dataTables.bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ base_url('assets/backend/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ base_url('assets/backend/plugins/datatables-responsive/css/datatables.responsive.css') }}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{{ base_url('assets/backend/pages/css/pages-icons.css') }}" rel="stylesheet" type="text/css">
+  <link class="main-stylesheet" href="{{ base_url('assets/backend/pages/css/pages.css') }}" rel="stylesheet" type="text/css" />
+  <!--[if lte IE 9]>
+  <link href="{{ base_url('assets/backend/plugins/codrops-dialogFx/dialog.ie.css') }}" rel="stylesheet" type="text/css" media="screen" />
   <![endif]-->
 </head>
-<body>
-  {% include _view %}
-  <script type="text/javascript" src="{{ base_url('assets/js/jquery/1.11.3/jquery.min.js') }}"></script>
-  <script type="text/javascript" src="{{ base_url('assets/js/bootstrap/bootstrap.min.js') }}"></script>
-  <script type="text/javascript" src="{{ base_url('assets/backend/js/metisMenu/metisMenu.min.js') }}"></script>
 
-  <script type="text/javascript" src="{{ base_url('assets/backend/js/raphael/raphael-min.js') }}"></script>
-  <script type="text/javascript" src="{{ base_url('assets/backend/js/morris/morris.min.js') }}"></script>
-  <script type="text/javascript" src="{{ base_url('assets/backend/js/morris-data.js') }}"></script>
-  <script type="text/javascript" src="{{ base_url('assets/backend/js/sb-admin-2.js') }}"></script>
+
+
+<body class="fixed-header">
+
+{% include _view %}
+
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/pace/pace.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery/jquery-1.11.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/modernizr.custom.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/bootstrapv3/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery/jquery-easy.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery-unveil/jquery.unveil.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery-bez/jquery.bez.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery-ios-list/jquery.ioslist.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery-actual/jquery.actual.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/bootstrap-select2/select2.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/classie/classie.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/switchery/js/switchery.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery-datatable/media/js/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery-datatable/media/js/dataTables.bootstrap.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/jquery-datatable/extensions/Bootstrap/jquery-datatable-bootstrap.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/datatables-responsive/js/datatables.responsive.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/plugins/datatables-responsive/js/lodash.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/pages/js/pages.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/js/tables.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/backend/js/scripts.js') }}"></script>
 </body>
 </html>

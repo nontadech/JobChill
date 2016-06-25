@@ -62,3 +62,5 @@ $route['company/logout'] = 'Company/Company_Logout';
 
 $route['backend/dashboard'] = 'Backend/Dashboard';
 
+
+
