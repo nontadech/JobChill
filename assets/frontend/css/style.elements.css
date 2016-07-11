@@ -1,0 +1,202 @@
+@import 'fonts.css';/*cloud_lightlight, cloudbold, rsubold, rsulight, rsuregular*/
+#job_header > nav{
+    background: none;
+    border: none;
+    margin-bottom: 0;
+}
+#job_header .navbar-default,
+#job_header .navbar-default .navbar-toggle:focus,
+#job_header .navbar-default .navbar-toggle:hover{
+    background: none;
+}
+#job_header .btn_border{
+    margin-left: 17px;
+    margin-top: 6px;
+}
+#job_header .navbar-brand{
+    padding-top: 3px;
+}
+.herobanner{
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.herobanner .image img{
+    margin: 0 auto;
+    display: block;
+}
+.herobanner .caption {
+
+}
+.navbar-default .navbar-nav > li > a.btn_border.green,
+.btn_border.green,
+.navbar-default .navbar-nav > li > a.btn_border.blue,
+.btn_border.blue{
+    height: 34px;
+    line-height: 3px;
+}
+.btn_border{
+    border-style: solid;
+    border-width: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.icon_button{
+    margin: 20px;
+}
+ul{
+    list-style: none;
+}
+@media (min-width: 1025px) {/* Desktop */
+    .herobanner .image{
+        height: 490px;
+    }
+    .herobanner .image img{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        max-width: none;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+    .herobanner .caption{
+        width: 100%;
+        max-width: 770px;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        text-shadow: none;
+        left: 0;
+        right: 0;
+        padding-top: 15px;
+    }
+    .herobanner .caption .desc {
+        text-align: center;
+        margin-top: 160px;
+    }
+    .btnTheme{
+        width: 300px;
+        height: 90px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 86px;
+    }
+    ul.button{
+        margin: 30px auto 0 auto;
+        padding: 0;
+        display: table;
+    }
+    ul.button li{
+        float: left;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1025px){/* ipad horizontal and vertical*/
+    .herobanner .image{
+        height: 300px;
+    }
+    .herobanner .image img{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        max-width: none;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+    .herobanner .caption{
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        text-shadow: none;
+        left: 0;
+        right: 0;
+        padding-top: 15px;
+    }
+    .herobanner .caption .desc {
+        text-align: center;
+        margin-top: 60px;
+    }
+    .btnTheme{
+        width: 170px;
+        height: 90px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 86px;
+    }
+    ul.button{
+        margin: 20px auto 0 auto;
+        padding: 0;
+        display: table;
+    }
+    ul.button li{
+        float: left;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 768px) { /* ipad vertical */
+    .herobanner .image {
+        height: 218px;
+    }
+    .herobanner .caption .desc{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 767px) {/* mobile horizontal and vertical */
+    .herobanner .image{
+        height: auto;
+    }
+    .herobanner .caption{
+        margin-top: -50px;
+        text-align: center
+    }
+    .btnTheme{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 50px;
+    }
+    ul.button{
+        margin: 0;
+        padding: 0;
+    }
+    ul.button li:nth-child(2){
+        display: none;
+    }
+    ul.button li{
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+    }
+    #job_header .btn_border{
+        border: none;
+    }
+}
+@media screen and (min-width: 415px) and (max-width: 767px) {/* mobile horizontal */
+
+}
+@media (max-width: 414px) {/* mobile vertical */
+
+}
+@media (max-width: 1024px) {
+    .herobanner .image img{
+        width: 100%;
+    }
+}

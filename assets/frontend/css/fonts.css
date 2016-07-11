@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'cloud_lightlight';
+    src: url('fonts/cloud-light-webfont.woff2') format('woff2'),
+    url('fonts/cloud-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'cloudbold';
+    src: url('fonts/cloud-bold-webfont.woff2') format('woff2'),
+    url('fonts/cloud-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rsubold';
+    src: url('fonts/rsu_bold-webfont.woff2') format('woff2'),
+    url('fonts/rsu_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rsulight';
+    src: url('fonts/rsu_light-webfont.woff2') format('woff2'),
+    url('fonts/rsu_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rsuregular';
+    src: url('fonts/rsu_regular-webfont.woff2') format('woff2'),
+    url('fonts/rsu_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

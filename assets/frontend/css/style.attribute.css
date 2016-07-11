@@ -1,0 +1,68 @@
+.navbar-default .navbar-nav > li > a.btn_border.green,
+.btn_border.green{
+    border-color: #a3c55c;
+    color: #75a80b;
+}
+.navbar-default .navbar-nav > li > a.btn_border.blue,
+.btn_border.blue{
+    border-color:#5ca3e6;
+    color: #1a7edb;
+}
+.btn_border{
+    font-family: cloud_lightlight;
+    font-size: 18px;
+    font-weight: bold;
+}
+.herobanner .caption .desc{
+    font-family: cloud_lightlight;
+    font-size: 18px;
+    font-weight: bold;
+}
+.btnTheme.green{
+    background-color: #97ca2d;
+}
+.btnTheme.blue{
+    background-color: #0b75d9;
+}
+@media (min-width: 1025px) {/* Desktop */
+    .herobanner .caption .desc{
+        font-family: cloudbold;
+        color: #fff;
+        font-size: 75px;
+        letter-spacing: 3px;
+        text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+    }
+    .btnTheme,.btnTheme:hover{
+        font-size: 45px;
+        color: #fff;
+        font-family: cloudbold;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1025px){/* ipad */
+    .herobanner .caption .desc{
+        font-family: cloudbold;
+        color: #fff;
+        font-size: 40px;
+        letter-spacing: 3px;
+        text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+    }
+    .btnTheme,.btnTheme:hover{
+        font-size: 35px;
+        color: #fff;
+        font-family: cloudbold;
+    }
+}
+@media (max-width: 767px) {/* mobile */
+    .herobanner .caption .desc{
+        font-family: cloudbold;
+        color: #fff;
+        font-size: 35px;
+        letter-spacing: 3px;
+        text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+    }
+    .btnTheme,.btnTheme:hover{
+        font-size: 25px;
+        color: #fff;
+        font-family: cloudbold;
+    }
+}

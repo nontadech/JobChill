@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>{{ meta_title|e }}</title>
   <link rel="stylesheet" href="{{ base_url('assets/css/bootstrap/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ base_url('assets/frontend/css/style.structure.css') }}">
+  <link rel="stylesheet" href="{{ base_url('assets/frontend/css/style.elements.css') }}">
+  <link rel="stylesheet" href="{{ base_url('assets/frontend/css/style.attribute.css') }}">
+</head>
+<body>
+  {% include _view %}
   <script type="text/javascript" src="{{ base_url('assets/js/jquery/1.11.3/jquery.min.js') }}"></script>
   <script type="text/javascript" src="{{ base_url('assets/js/bootstrap/bootstrap.min.js') }}"></script>
   <script type="text/javascript" src="{{ base_url('assets/js/bootstrap/validator.js') }}"></script>
-</head>
-<body>
-{% include _view %}
 </body>
 </html>
