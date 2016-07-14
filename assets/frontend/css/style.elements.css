@@ -49,6 +49,35 @@
 ul{
     list-style: none;
 }
+
+#slide_home{
+
+}
+#slide_home > h3{
+
+}
+#slide_home .slide_body{
+
+}
+#slide_home .slide_body ul{
+
+}
+#slide_home .slide_body ul li{
+
+}
+#slide_home .slide_body ul li .image{
+
+}
+#slide_home .slide_body ul li figcaption{
+
+}
+#slide_home .slide_body ul li figcaption label{
+
+}
+#slide_home .slide_body ul li figcaption span{
+
+}
+
 @media (min-width: 1025px) {/* Desktop */
     .herobanner .image{
         height: 490px;
@@ -98,6 +127,7 @@ ul{
     ul.button li{
         float: left;
     }
+
 }
 @media screen and (min-width: 768px) and (max-width: 1025px){/* ipad horizontal and vertical*/
     .herobanner .image{
